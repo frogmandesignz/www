@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet" type="text/css">
+    <title>HaleNom Projects</title>
+
+    <!-- Bootstrap -->	
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+   <script src="js/jquery-3.3.1.min.js"></script>
+   
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/popper.min.js"></script> 
+   <script src="js/bootstrap-4.3.1.js"></script>
+
+   <script>
+
+    function txtParts(){
+        desc_txt.value = "HaleNom Bill\n of Materials";
+    }
+    
+    function txtModal(){
+        desc_txt.value = "Use thumbnails.\n Click close to exit.";
+    }
+    
+    function txtClose(){
+        desc_txt.value = "Use arrows or\n circles to scroll.";
+    }
+
+    function btnHideAll(){
+        
+        var Hale = document.getElementById("Hale_btn");
+        Hale.style.visibility = "hidden";
+        
+        var Super = document.getElementById("Superman_btn");
+        Super.style.visibility = "hidden";
+        
+        var Bolt = document.getElementById("Bolt_btn");
+        Bolt.style.visibility = "hidden";
+        
+        var Jungle = document.getElementById("Jungle_btn");
+        Jungle.style.visibility = "hidden";
+    }
+</script>
+
+  </head>
+
+<body>
+
+  <!-- Header -->
+    <nav class="navbar fixed-top header-area nav">
+                
+        <a  class="navbar-brand"
+            href="Index.html"><span class="hidden3"><img  src="images/logo/logo.png"
+                                    width="230"
+                                    height="60"
+                                    alt="Logo Icon"
+                                    class="img_nav"></span><img  src="images/logo/logo_mobile.png"
+                                    width="80"
+                                    height="34"
+                                    class="img_nav_small"
+                                    alt="Mobile Logo Icon">
+        </a> 
+        
+        <textarea   rows= "2"
+                    cols = "1"                       
+                    class="captionText"
+                    name="captionText"
+                    draggable="false"
+                    contenteditable="false"
+                    readonly                                          
+                    id="desc_txt">Use menu &#013;at the bottom.</textarea>
+
+        <div    id="nav-div">
+            <ul     id="nav-links">
+                <li><a  href="index.html"
+                        title="View Portfolio"
+                        target="_self"><img     src="images/icons/Portfolio_Icon.png"
+                                                class="img_Portfolio"
+                                                width="40"
+                                                height="37"
+                                                alt="Portfolio Icon"></a>
+                        <a  href="index.html"
+                            title="View Portfolio"
+                            class="portfolio"
+                            id="portfolio_txt">
+                            <span class="hidden">Portfolio</span></a>
+                </li>
+                
+                <li class="active">
+                    
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"><img     src="images/icons/Projects_Icon.png"
+                                                class="img_Projects"
+                                                width="40"
+                                                height="33"
+                                                alt="Project Icon"></a>
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"
+                        class="projects">
+                        <span class="hidden2">Projects</span>                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <!-- Content -->
+<main   class="carousel-content-area">
+
+    <div    class="Projects_Puppies">        
+        <div    class="Brief_Puppies">
+            <div    class="Brief_Div">
+                <div    class="Text_Div">
+                    <p  id="Brief_Puppy_txt">Brief: HaleNom 3D Printer</p>
+                    <!--<textarea   rows="1"
+                                cols="1"
+                                id="Brief_Puppy_txt">Brief: HaleNom 3D Printer</textarea>-->
+                     
+                     <p id="Scope_Puppy_txt">Scope: Used Autodesk's Inventor to CAD a larger version of <a href="https://github.com/OmNomNomagon/ReDuplicator-MK3x" target="_blank">OmNom's ReDuplicator</a> while creating custom 3D printed mounts for <a href="https://www.sliceengineering.com/collections/hotends/products/the-mosquito-hotend%E2%84%A2" target="_blank">Slice Engineering's Mosquito Hotend</a> coupled with <a href="https://www.bondtech.se/en/product/bmg-extruder/" target="_blank">Bondtech's BMG extruder</a>.</p>
+                    <!--<textarea   rows="6"
+                                cols="1"
+                                id="Scope_Puppy_txt">Scope: Using Autodesk's Inventor CAD a larger version of <a href="https://github.com/OmNomNomagon/ReDuplicator-MK3x" target="_blank">OmNom's ReDuplicator</a> fitted with custom 3D printed mounts for Slice Engineering's Mosquito Hotend coupled with Bondtech's BMG extruder.</textarea>-->
+                </div>
+                <div    class="Accessories_Div">
+                    <ul     id="Accessories_Hale">
+                        <li><a  href="HaleNom_Mounts.html">Mounts</a></li>
+                        <li><a  href="https://github.com/frogmandesignz/Hale_Nom" target="_blank">Files</a></li>
+                        <li><a  href="#HaleNom_Parts_Modal"
+                                onclick="txtParts()">Parts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div    class="Content_HaleNom">
+            
+        </div>
+    </div>
+
+    <div	id="HaleNom_Parts_Modal"
+            class="modal-window_halenomparts">
+
+        <div	class="modal-container">
+
+            <div>
+                <a  href="#"
+                    title="Close"
+                    class="modal-close"
+                    onclick="txtClose()">Close</a>
+            </div>
+
+            <div   class="content-area">                    
+                <div    class="row">
+                    <table>
+                        <caption>
+                            HaleNom BOM
+                        </caption>
+                    
+                        <tr class="odd">
+                            <th> Product Name </th>
+                            <th> Part Number </th>
+                            <th> Specifics </th>
+                            <th> Quantity </th>
+                            <th> Price </th>
+                            <th> Link </th>
+                        </tr>
+                    
+                        <tr class="even">
+                            <td> 3030 Extrusion: Z Axis </td>
+                            <td> HFSLB6-3030-415 </td>
+                            <td> 415 mm </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $11.12 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302686450/?HissuCode=HFSLB6-3030-415&PNSearch=HFSLB6-3030-415&searchFlow=results2type&KWSearch=HFSLB6-3030-415&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302686450%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000332720%22%3a%22415%22%2c%22fixedInfo%22%3a%22MDM00001298677110302686450-36090445-1255582776479363661%7c281%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+                    
+                        <tr class="odd">
+                            <td> 3030 Extrusion: Y Axis </td>
+                            <td> HFSLB6-3030-410 </td>
+                            <td> 410 MM </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $10.98 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302686450/?HissuCode=HFSLB6-3030-410&PNSearch=HFSLB6-3030-410&searchFlow=results2type&KWSearch=HFSLB6-3030-410&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302686450%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000332720%22%3a%22410%22%2c%22fixedInfo%22%3a%22MDM00001298677110302686450-36090445-1255582776479363661%7c281%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> 3030 Extrusion: X Axis Tower </td>
+                            <td> HFSLB6-3030-440 </td>
+                            <td> 440 MM </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $11.78 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302686450/?HissuCode=HFSLB6-3030-440&PNSearch=HFSLB6-3030-440&searchFlow=results2type&KWSearch=HFSLB6-3030-440&curSearch=%7b"field"%3a"%40search"%2c"seriesCode"%3a"110302686450"%2c"innerCode"%3a""%2c"sort"%3a1%2c"specSortFlag"%3a0%2c"allSpecFlag"%3a0%2c"page"%3a1%2c"pageSize"%3a"60"%2c"00000332720"%3a"440"%2c"fixedInfo"%3a"MDM00001298677110302686450-36090445-1255582776479363661%7c281"%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                            
+                        </tr>
+                    
+                        <tr class="odd">
+                            <td> 3030 Extrusion: X Axis Base </td>
+                            <td> HFSLB6-3030-318 </td>
+                            <td> 258 MM </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $7.26 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302686450/?HissuCode=HFSLB6-3030-318&PNSearch=HFSLB6-3030-318&searchFlow=results2type&KWSearch=HFSLB6-3030-318&curSearch=%7b"field"%3a"%40search"%2c"seriesCode"%3a"110302686450"%2c"innerCode"%3a""%2c"sort"%3a1%2c"specSortFlag"%3a0%2c"allSpecFlag"%3a0%2c"page"%3a1%2c"pageSize"%3a"60"%2c"00000332720"%3a"318"%2c"fixedInfo"%3a"MDM00001298677110302686450-36090445-1255582776479363661%7c281"%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> 30x30x35 Corner Brackets </td>
+                            <td> HBLFSNB6 </td>
+                            <td> Reversal Brackets with Tab </td>
+                            <td class="center_cell"> 14 </td>
+                            <td class="center_cell"> $27.72 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110300442340/?HissuCode=HBLFSNB6&PNSearch=HBLFSNB6&KWSearch=HBLFSNB6&searchFlow=results2type&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110300442340%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%22jp000191044%22%3a%22mig00000000342147%22%2c%22jp000191049%22%3a%22mig00000000025905%22%2c%22jp000191050%22%3a%22mig00000000025899%22%2c%22jp000191051%22%3a%22mig00000000025900%22%2c%22fixedInfo%22%3a%22MDM0000130177611030044234011%7c14%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> Aluminum Brackets </td>
+                            <td> HPTLS6 </td>
+                            <td> L-Shaped </td>
+                            <td class="center_cell"> 8 </td>
+                            <td class="center_cell"> $23.04 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302250620/?HissuCode=HPTLS6&PNSearch=HPTLS6&KWSearch=HPTLS6&searchFlow=results2type&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302250620%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000042740%22%3a%22a%22%2c%22jp000191117%22%3a%22mig00000000349793%22%2c%22jp000191120%22%3a%22mig00000000384466%22%2c%22jp000191122%22%3a%22mig00000000349803%22%2c%22fixedInfo%22%3a%22MDM0000130495911030225062011%7c11%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> Insertion Short Nuts </td>
+                            <td> HNTT6-5 </td>
+                            <td> For HFS6 Series Aluminum Extrusions </td>
+                            <td class="center_cell"> 14 </td>
+                            <td class="center_cell"> $7.14 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302251050/?HissuCode=HNTT6-5&PNSearch=HNTT6-5&searchFlow=results2type&KWSearch=HNTT6-5&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302251050%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000042725%22%3a%22c%22%2c%2200000042748%22%3a%22c%22%2c%2200000042750%22%3a%22a%22%2c%2200000042744%22%3a%22b%22%2c%22jp000003045%22%3a%22mig00000000410407%22%2c%22jp000003047%22%3a%22mig00000000410408%22%2c%22jp000003053%22%3a%22mig00000000410266%22%2c%22jp000003054%22%3a%22mig00000000410404%22%2c%22fixedInfo%22%3a%22MDM0000130473111030225105011%7c12%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+
+                        <tr class="odd">
+                            <td> Igus Linear Bearing </td>
+                            <td> RJ4JP-01-08 </td>
+                            <td> Used with 8mm Rod </td>
+                            <td class="center_cell"> 3 </td>
+                            <td class="center_cell"> $6.71 </td>
+                            <td class="center_cell"> <a href="https://www.ebay.com/i/162674921694?chn=ps" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> Linear Bushings </td>
+                            <td> LM8UU </td>
+                            <td> L-Shaped </td>
+                            <td class="center_cell"> 4 </td>
+                            <td class="center_cell"> $48.00 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/221000091803/?PNSearch=LM8UU&HissuCode=LM8UU&searchFlow=suggest2products&Keyword=LM8UU&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22221000091803%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000042370%22%3a%22a%22%2c%2200000028969%22%3a%22mig00000001421852%22%2c%2200000028971%22%3a%22mig00000001434819%22%2c%2200000028970%22%3a%22mig00000001421853%22%2c%2200000028965%22%3a%22a%22%2c%2200000028974%22%3a%22b%22%2c%2200000028976%22%3a%22mig00000001434815%22%2c%22jp000007104%22%3a%22mig00000000009053%22%2c%22fixedInfo%22%3a%22MDM0000337708622100009180311%7c21%22%7d&Tab=codeList" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M5 T-Nuts 3030 </td>
+                            <td> 30s-M5 </td>
+                            <td> Carbon Steel with Slot 8mm </td>
+                            <td class="center_cell"> 100 </td>
+                            <td class="center_cell"> $14.99 </td>
+                            <td class="center_cell"> <a href="https://www.amazon.com/Boeray-Carbon-Steel-Aluminum-Extrusion/dp/B078RGCSZT/ref=sr_1_9?s=hi&ie=UTF8&qid=1525825942&sr=1-9&keywords=M5+T-Nut+3030" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3 Heatserts </td>
+                            <td> M3-UHBRHESF | TR Fastenings </td>
+                            <td> Brass, Unheaded <br/> 5.8 x 4.4 x 1.8 mm [Body Length | External Diameter | Wall Thickness] </td>
+                            <td class="center_cell"> 100 </td>
+                            <td class="center_cell"> $11.85 </td>
+                            <td class="center_cell"> <a href="https://au.element14.com/tr-fastenings/m3-uhbrhesf/brass-insert-unheaded-m3/dp/2474921" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M5x12 Cross Recessed Pan Head Screw </td>
+                            <td> NKJ5-12 </td>
+                            <td> M5x12 MM Length </td>
+                            <td class="center_cell"> 100 </td>
+                            <td class="center_cell"> $6.00 </td>
+                            <td class="center_cell"> <a href="https://us.misumi-ec.com/vona2/detail/110302280810/?HissuCode=NKJ5-12&PNSearch=NKJ5-12&searchFlow=results2type&KWSearch=NKJ5-12&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302280810%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000071822%22%3a%22nvd00000000000004%22%2c%2200000071552%22%3a%22mig00000001426444%22%2c%2200000071464%22%3a%2200000071464.b!00017%22%2c%2200000070394%22%3a%22a%22%2c%22fixedInfo%22%3a%22MDM0000131643911030228081011%7c11%22%7d&Tab=wysiwyg_area_0" target="_blank"> Link </a></td>
+                        </tr>
+
+                        <tr class="even">
+                            <td> M5x16 Socket Button Head Screw </td>
+                            <td> 6633 </td>
+                            <td> 5 x 0.8 x 16 MM (Diameter | Thread pitch | Length) </td>
+                            <td class="center_cell"> 10 </td>
+                            <td class="center_cell"> $1.40 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=6634" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        
+                        <tr class="odd">
+                            <td> M5x20 Socket Button Head Screw </td>
+                            <td> 6635 </td>
+                            <td> 5 x 0.8 x 20 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $0.30 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=6635" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M5x25 Socket Button Head Screw </td>
+                            <td> 6636 </td>
+                            <td> 5 x 0.8 x 25 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $0.36 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=6636" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M5x30 Socket Button Head Screw </td>
+                            <td> 6637 </td>
+                            <td> 5 x 0.8 x 30 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $0.44 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=6637" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M5x35 Socket Button Head Screw </td>
+                            <td> 6638 </td>
+                            <td> 5 x 0.8 x 35 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 2 </td>
+                            <td class="center_cell"> $0.48 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=6638" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M3x5 Socket Button Head Screw  </td>
+                            <td> 18787 </td>
+                            <td> 3 x 0.5 x 5 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 8 </td>
+                            <td class="center_cell"> $0.40 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=18787" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3x6 Socket Button Head Screw </td>
+                            <td> 7218 </td>
+                            <td> 3 x 0.5 x 6 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 8 </td>
+                            <td class="center_cell"> $.40 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7218" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M3x8 Socket Button Head Screw </td>
+                            <td> 7219 </td>
+                            <td> 3 x 0.5 x 8 MM (Diameter | Thread Picth | Length) </td>
+                            <td class="center_cell"> 8 </td>
+                            <td class="center_cell"> $.40 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7219" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3x12 Socket Button Head Screw </td>
+                            <td> 7221 </td>
+                            <td> 3 x 0.5 x 12 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 6 </td>
+                            <td class="center_cell"> $0.42 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7221" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M3x16 Socket Button Head Screw </td>
+                            <td> 7222 </td>
+                            <td> 3 x 0.5 x 16 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 6 </td>
+                            <td class="center_cell"> $0.48 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7222" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3x30 Socket Button Head Screw </td>
+                            <td> 15292 </td>
+                            <td> 3 x 0.5 x 30 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 5 </td>
+                            <td class="center_cell"> $0.60 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=15292" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M3x6 Socket Flat Head Screw </td>
+                            <td> 7212 </td>
+                            <td> 3 x 0.5 x 6 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 14 </td>
+                            <td class="center_cell"> $0.84 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7212" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3x8 Socket Flat Head Screw </td>
+                            <td> 7213 </td>
+                            <td> 3 x 0.5 x 8 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 14 </td>
+                            <td class="center_cell"> $0.84 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7213" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M3x10 Socket Flat Head Screw </td>
+                            <td> 7214 </td>
+                            <td> 3 x 0.5 x 10 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 10 </td>
+                            <td class="center_cell"> $0.70 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7214" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3x12 Socket Flat Head Screw </td>
+                            <td> 7215 </td>
+                            <td> 3 x 0.5 x 12 MM (Diameter | Thread Pitch | Length) </td>
+                            <td class="center_cell"> 10 </td>
+                            <td class="center_cell"> $0.80 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=7215" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M5 Nylock Nut </td>
+                            <td> 4794 </td>
+                            <td> 5 x 0.5 (Diameter | Thread Pitch) <br/> Nuts for Idlers </td>
+                            <td class="center_cell"> 4 </td>
+                            <td class="center_cell"> $0.28 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=4794" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M3 Nylock Nut </td>
+                            <td> 4792 </td>
+                            <td> 3 x 0.5 MM (Diameter | Thread Pitch) </td>
+                            <td class="center_cell"> 20 </td>
+                            <td class="center_cell"> $1.00 </td>
+                            <td class="center_cell"> <a href="https://www.boltdepot.com/Product-Details.aspx?product=4792" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> M5 Smooth Idler Pulley </td>
+                            <td>  </td>
+                            <td> 20T 5MM Bore | 6mm Belt Width </td>
+                            <td class="center_cell"> 3 </td>
+                            <td class="center_cell"> $11.75 </td>
+                            <td class="center_cell"> <a href="https://www.ebay.com/itm/20T-5mm-Diameter-Bore-Gt2-Smooth-Idler-Pulley-For-3D-Printer-Accessory-Part-TW/121939011362?hash=item1c6421a722:g:TWgAAOSwwpdW-fDi:sc:USPSFirstClass!32935!US!-1" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="even">
+                            <td> M5 Fibrous Washers </td>
+                            <td> 71Y8982 </td>
+                            <td> 5.4 | 10 MM (Internal | External Diameter) </td>
+                            <td class="center_cell"> 100 </td>
+                            <td class="center_cell"> $2.70 </td>
+                            <td class="center_cell"> <a href="https://www.newark.com/tr-fastenings/dm5-pwfi-bg10/fibre-washer-m5-5-4mm-10mm/dp/71Y8982?gclid=CjwKCAjwusrtBRBmEiwAGBPgE6w-CScR2jmUxY0I5MzQ652thBm9-CDrKvrAEAiMWcFLyeksVSOq3BoCFDgQAvD_BwE&mckv=sWQjBbKH2_dc|pcrid|81605889141|plid||kword||match||slid||product|71Y8982|pgrid|20389674261|ptaid|aud-157231595781:pla-294357559827|&CMP=KNC-GUSA-GEN-SHOPPING-AllProducts" target="_blank"> Link </a></td>
+                        </tr>
+                        
+                        <tr class="odd">
+                            <td> 5 M GT2 Belt </td>
+                            <td> L16011611 [AIWAN LEHZI] </td>
+                            <td> 5 Meters Length | 6MM Width | 0.75mm Tooth Height  </td>
+                            <td class="center_cell"> 1 </td>
+                            <td class="center_cell"> $7.99 </td>
+                            <td class="center_cell"> <a href="https://www.amazon.com/Mercurry-Meters-timing-Rostock-GT2-6mm/dp/B071K8HYB4/ref=sr_1_2?s=industrial&ie=UTF8&qid=1525321621&sr=1-2&keywords=5M+GT2+Belt" target="_blank"> Link </a></td>
+                        </tr>
+                    </table>   
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-area">
+    <p>&copy;2019 | Frogman Designz</p>
+        
+        <div    class="footer_icon_container">
+            
+            
+            <a href="https://github.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/Github.png"
+                        width="40"
+                        height="40"
+                        alt="Github Icon">
+            </a>
+            
+            <!--<a href="https://twitter.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/download3.png"
+                        width="32px"
+                        height="32px"
+                        alt="Twitt">
+            </a>-->
+            
+            <a href="https://www.linkedin.com/in/frogmandesignz/" target="_blank">
+                <img    src="images/icons/download5.png"
+                        width="40"
+                        height="40"
+                        alt="LinkedIn Icon">
+            </a>
+        </div>
+</footer>
+
+</body>
+
+</html>

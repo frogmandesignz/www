@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet" type="text/css">
+    <title>Projects Duplicator</title>
+
+    <!-- Bootstrap -->	
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+   <script src="js/jquery-3.3.1.min.js"></script>
+   
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/popper.min.js"></script> 
+   <script src="js/bootstrap-4.3.1.js"></script>
+
+   <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+            
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n <1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";            
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+        
+            slides[slideIndex-1].style.display = "flex";
+            dots[slideIndex-1].className += " active";
+            /*captionText.innerHTML = dots[slideIndex-1].alt;*/
+        }
+        </script>
+
+<script>
+    
+    function txtClose(){
+        desc_txt.value = "Click close\n to exit.";
+    }
+   
+    function txtModal(){
+        desc_txt.value = "Use menu at\n the bottom.";
+    }
+
+</script>
+
+  </head>
+
+<body>
+
+  <!-- Header -->
+    <nav class="navbar fixed-top header-area nav">
+                
+        <a  class="navbar-brand"
+            href="Index.html"><span class="hidden3"><img  src="images/logo/logo.png"
+                                    width="230"
+                                    height="60"
+                                    alt="Logo Icon"
+                                    class="img_nav"></span><img  src="images/logo/logo_mobile.png"
+                                    width="80"
+                                    height="34"
+                                    class="img_nav_small"
+                                    alt="Mobile Logo Icon">
+        </a> 
+        
+        <textarea   rows= "2"
+                    cols = "1"                       
+                    class="captionText"
+                    name="captionText"
+                    draggable="false"
+                    contenteditable="false"
+                    readonly                                         
+                    id="desc_txt">Use menu at&#013; the bottom.</textarea>
+
+        <div    id="nav-div">
+            <ul     id="nav-links">
+
+                <li><a  href="index.html"
+                        title="View Portfolio"
+                        target="_self"><img     src="images/icons/Portfolio_Icon.png"
+                                                class="img_Portfolio"
+                                                width="40"
+                                                height="37"
+                                                alt="Portfolio Icon"></a>
+                        <a  href="index.html"
+                            title="View Portfolio"
+                            class="portfolio"
+                            id="portfolio_txt">
+                            <span class="hidden">Portfolio</span></a>
+                </li>
+                
+                <li class="active">
+                    
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"><img     src="images/icons/Projects_Icon.png"
+                                                class="img_Projects"
+                                                width="40"
+                                                height="33"
+                                                alt="Project Icon"></a>
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"
+                        class="projects">
+                        <span class="hidden2">Projects</span>                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <!-- Content -->
+<main   class="carousel-content-area">
+    <div    class="Projects_Puppies">        
+        <div    class="Brief_Puppies">
+            <div    class="Brief_Div">
+                <div    class="Text_Div">
+                    <p  id="Brief_Puppy_txt">Brief: i3 E3D V6 Titan Mounts </p>
+                    <!--<textarea   rows="1"
+                                cols="1"
+                                id="Brief_Puppy_txt">Brief: HaleNom 3D Printer</textarea>-->
+                     
+                     <p id="Scope_Puppy_txt">Scope: Used Autodesk's Inventor to CAD a replication of <a href="https://www.usawanhao.com/untitled-c8lc" target="_blank">Wanhao's Duplicator i3 V2.1</a> to create custom 3D printed mounts for a dual-fan cooling system using <a href="https://www.antclabs.com/bltouch" target="_blank">Antclab's BL Touch V2</a>, <a href="https://e3d-online.com/v6-all-metal-hotend" target="_blank">e3D's V6 All-Metal HotEnd</a> and their <a href="https://e3d-online.com/titan-extruder" target="_blank">Titan Extruder</a>.</p>
+                    <!--<textarea   rows="6"
+                                cols="1"
+                                id="Scope_Puppy_txt">Scope: Using Autodesk's Inventor CAD a larger version of <a href="https://github.com/OmNomNomagon/ReDuplicator-MK3x" target="_blank">OmNom's ReDuplicator</a> fitted with custom 3D printed mounts for Slice Engineering's Mosquito Hotend coupled with Bondtech's BMG extruder.</textarea>-->
+                </div>
+                <div    class="Accessories_Div">
+                    <ul     id="Accessories_Hale">
+                        <li><a  href="Duplicator_Mounts.html">Mounts</a></li>
+                        <li><a  href="https://github.com/frogmandesignz/Duplicator_E3D" target="_blank">Files</a></li>
+                        <li><a  href="#open-modal_i3"
+                                onclick="txtClose();currentSlide(1);">Renders</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div    class="Content_i3">
+        </div>
+    </div>
+
+    <div	id="open-modal_i3"
+            class="modal-window_i3">
+
+                <div	class="modal-container">
+
+                    <div>
+                        <a  href="#"
+                            title="Close"
+                            class="modal-close"
+                            onclick="txtClose()">Close
+                            </a>
+                    </div>
+
+                    <div   class="content-area">                    
+                        <div    class="row">                           
+
+                            <div    class="column_main_i3">
+                                <div    class="mySlides">                                    
+                                    <div    class="i3_1"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="i3_2"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="i3_3"></div>
+                                </div>                                
+                            </div>
+                            
+                            <div    class="column_thumbs_i3">
+                                <div    class="thumbSlides">                                    
+                                    <div    	id="i3_Thumb1"						                        
+						                        onclick="currentSlide(1)">
+                                    </div>
+                                    <div    	id="i3_Thumb2"                                                
+                                                onclick="currentSlide(2)">
+                                    </div>
+				                    <div    	id="i3_Thumb3"						                        
+						                        onclick="currentSlide(3)">
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+</main>
+<!-- Footer -->
+<footer class="footer-area">
+    <p>&copy;2019 | Frogman Designz</p>
+        
+        <div    class="footer_icon_container">
+            
+            
+            <a href="https://github.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/Github.png"
+                        width="40"
+                        height="40"
+                        alt="Github Icon">
+            </a>
+            
+            <!--<a href="https://twitter.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/download3.png"
+                        width="32px"
+                        height="32px"
+                        alt="Twitt">
+            </a>-->
+            
+            <a href="https://www.linkedin.com/in/frogmandesignz/" target="_blank">
+                <img    src="images/icons/download5.png"
+                        width="40"
+                        height="40"
+                        alt="LinkedIn Icon">
+            </a>
+        </div>
+</footer>
+
+</body>
+
+</html>

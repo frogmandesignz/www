@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet" type="text/css">
+    <title>Duplicator Mounts</title>
+
+    <!-- Bootstrap -->	
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.3.1.js"></script>
+
+    <script>
+        
+        function txtModal(){
+            desc_txt.value = "Click on\n each part.";
+        }
+        
+        function txtClose(){
+            desc_txt.value = "Click close\n to exit.";
+        }
+    
+        function btnHideAll(){
+            
+            var Hale = document.getElementById("Hale_btn");
+            Hale.style.visibility = "hidden";
+            
+            var Super = document.getElementById("Superman_btn");
+            Super.style.visibility = "hidden";
+            
+            var Bolt = document.getElementById("Bolt_btn");
+            Bolt.style.visibility = "hidden";
+            
+            var Jungle = document.getElementById("Jungle_btn");
+            Jungle.style.visibility = "hidden";
+        }
+    </script>
+	
+  </head>
+
+<body>
+
+  <!-- Header -->
+    <nav class="navbar fixed-top header-area nav">
+                
+        <a  class="navbar-brand"
+            href="Index.html"><span class="hidden3"><img  src="images/logo/logo.png"
+                                    width="230"
+                                    height="60"
+                                    class="img_nav"></span><img  src="images/logo/logo_mobile.png"
+                                    width="80"
+                                    height="34"
+                                    class="img_nav_small"
+                                    alt="Mobile Logo Icon">
+        </a> 
+        
+        <textarea   rows= "2"
+                    cols = "1"                       
+                    class="captionText"
+                    name="captionText"
+                    draggable="false"
+                    contenteditable="false"
+                    readonly                                          
+                    id="desc_txt">Click on &#013;each part.</textarea>
+                    
+        <div    id="nav-div">
+            <ul     id="nav-links">
+                <li><a  href="index.html"
+                        title="View Portfolio"
+                        target="blank"><img     src="images/icons/Portfolio_Icon.png"
+                                                class="img_Portfolio"
+                                                width="40"
+                                                height="37"></a>
+                        <a  href="index.html"
+                            title="View Portfolio"
+                            class="portfolio"
+                            id="portfolio_txt">
+                            <span class="hidden">Portfolio</span></a>
+                </li>
+                
+                <li class="active">
+                    
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"><img     src="images/icons/Projects_Icon.png"
+                                                class="img_Projects"
+                                                width="40"
+                                                height="33"
+                                                alt="Project Icon"></a>
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"
+                        class="projects">
+                        <span class="hidden2">Projects</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <!-- Content -->
+<main   class="carousel-content-area">
+    <div    class="Projects_Puppies">        
+        <div    class="i3_Mount_Content">
+            <div    class="i3_Row1">
+                <div    id="i3_Fan_Left_Content">
+                    <a  href="#e3D_Fan_Left_Modal"
+                        onclick="txtClose()"><div    id="i3_Fan_Left"></div>
+                    <p class="p_Hale_Project">Left Cooling Shroud</p></a>                    
+                </div>
+
+                <div    id="i3_Fan_Right_Content">
+                    <a  href="#e3D_Fan_Right_Modal"
+                        onclick="txtClose()"><div    id="i3_Fan_Right"></div>
+                    <p class="p_Hale_Project">Right Cooling Shroud</p></a>                    
+                </div>                
+            </div>
+
+            <div    class="i3_Row2">
+                <div    id="i3_Front_Mount_Content">                
+                    <a  href="#e3D_Front_Mount_Modal"
+                        onclick="txtClose()"><div    id="i3_Front_Mount"></div>
+                    <p class="p_Hale_Project">X-Carriage Front</p></a>
+                </div>
+
+                <div    id="i3_Rear_Mount_Content">                
+                    <a  href="#e3D_Rear_Mount_Modal"
+                        onclick="txtClose()"><div    id="i3_Rear_Mount"></div>
+                    <p class="p_Hale_Project">X-Carriage Rear</p></a>  
+                </div>
+            </div>
+
+            <div    class="i3_Row3">   
+                <div    id="i3_Heatsink_Fan_Content">
+                    <a  href="#e3D_Heatsink_Shroud_Modal"
+                        onclick="txtClose()"><div    id="i3_Heatsink_Fan"></div>
+                    <p  class="p_Hale_Project">Heatsink Shroud</p></a>
+                </div>
+
+                <div    id="i3_e3D_Assembly_Content">
+                    <a  href="#e3D_Assembly_Modal"
+                        onclick="txtClose()"><div    id="i3_e3D_Assembly"></div>
+                    <p  class="p_Hale_Project">X-Carriage Assembly</p></a>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div    class="Content_i3_Charted">
+
+            <a  href="Projects_Duplicator.html"
+                title="Duplicator Projects"
+                target="self"><img  src="images/icons/Brief_Back.png"
+                                    class="img_Brief"
+                                    width="20"
+                                    height="20"></a>
+                <a  href="Projects_Duplicator.html"
+                target="_self"
+                title="Duplicator Projects"
+                class="brief_back_txt">Back to Brief</span></a>
+            
+        </div>
+</div>
+
+    <div    class="modal-window_hale_fan"
+            id="e3D_Fan_Left_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Fan_Left_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div    class="modal-window_hale_rear"
+            id="e3D_Fan_Right_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Fan_Right_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div    class="modal-window_hale_front"
+            id="e3D_Front_Mount_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Front_Mount_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div    class="modal-window_hale_front"
+            id="e3D_Rear_Mount_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Rear_Mount_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div    class="modal-window_hale_front"
+            id="e3D_Heatsink_Shroud_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Heatsink_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div    class="modal-window_hale_front"
+            id="e3D_Assembly_Modal">
+
+        <div    class="modal-container">
+            
+            <div>
+                <a  href="#"
+                    onclick="txtModal()"
+                    title="Close"
+                    class="modal-close">Close</a>
+            </div>
+        
+            <div    class="content-area">    
+                <div    class="row">
+                    <div    class="column_main_mounts">
+                        <div    class="Slide_Hale">                
+                            <div    class="e3D_Assembly_Drawing"></div>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer-area">
+    <p>&copy;2019 | Frogman Designz</p>
+        
+        <div    class="footer_icon_container">
+            
+            
+            <a href="https://github.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/Github.png"
+                        width="40px"
+                        height="40px"
+                        alt="Github">
+            </a>
+            
+            <!--<a href="https://twitter.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/download3.png"
+                        width="32px"
+                        height="32px"
+                        alt="Twitt">
+            </a>-->
+            
+            <a href="https://www.linkedin.com/in/frogmandesignz/" target="_blank">
+                <img    src="images/icons/download5.png"
+                        width="40px"
+                        height="40px"
+                        alt="Linked">
+            </a>
+        </div>
+</footer>
+
+</body>
+
+</html>

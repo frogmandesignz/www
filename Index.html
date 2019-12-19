@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet" type="text/css">
+    <title>Frogman Designz</title>
+
+    <!-- Bootstrap -->
+	<!--<link href="css/bootstrap_edit-4.3.1.css" rel="stylesheet">-->
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.3.1.js"></script>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+    
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n <1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";            
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
+    /*captionText.innerHTML = dots[slideIndex-1].alt;*/
+}
+</script>
+
+<script>
+
+    function btnDisplaySuperman(){
+        var button = document.getElementById("Superman_btn");
+        button.style.visibility = "visible";
+        desc_txt.value = "Click Superman\n to expand.";
+    }
+
+    function btnDisplayHale(){
+        var button = document.getElementById("Hale_btn");
+        button.style.visibility = "visible";
+        desc_txt.value = "Click 3D Printer\n to expand.";
+    }
+
+    function btnDisplayBolt(){
+        var button = document.getElementById("Bolt_btn");
+        button.style.visibility = "visible";
+        desc_txt.value = "Click necklace\n to expand.";
+    }
+    
+    function btnDisplayJungle(){
+        var button = document.getElementById("Jungle_btn");
+        button.style.visibility = "visible";
+        desc_txt.value = "Click VB complex\n to expand.";
+    }
+
+    function txtSuperman(){
+        desc_txt.value = "Click Superman\n to expand.";
+    }
+    
+    function txtFrog(){
+        desc_txt.value = "Click Pepper\n to expand.";
+    }
+    
+    function txtMango(){
+        desc_txt.value = "Logo created\n with Illustrator.";
+    }
+    
+    function txtSilent(){
+        desc_txt.value = "Logo created\n with Photoshop.";
+    }
+    
+    function txtWatch(){
+        desc_txt.value = "Use arrows or\n circles to scroll.";
+    }
+    
+    function txtModal(){
+        desc_txt.value = "Use thumbnails.\n Click close to exit.";
+    }
+    
+    function txtClose(){
+        desc_txt.value = "Use arrows or\n circles to scroll.";
+    }
+
+    function btnHideAll(){
+        
+        var Hale = document.getElementById("Hale_btn");
+        Hale.style.visibility = "hidden";
+        
+        var Super = document.getElementById("Superman_btn");
+        Super.style.visibility = "hidden";
+        
+        var Bolt = document.getElementById("Bolt_btn");
+        Bolt.style.visibility = "hidden";
+        
+        var Jungle = document.getElementById("Jungle_btn");
+        Jungle.style.visibility = "hidden";
+    }
+</script>
+</head>
+
+    <body>
+
+    <!--Header-->
+        <nav class="navbar fixed-top header-area nav">
+
+            <a  class="navbar-brand"
+                href="Index.html"><span class="hidden3"><img  src="images/logo/logo.png"
+                                        width="230"
+                                        height="60"
+                                        alt="Logo Icon"
+                                        class="img_nav"></span><img  src="images/logo/logo_mobile.png"
+                                        width="80"
+                                        height="34"
+                                        class="img_nav_small"
+                                        alt="Mobile Logo Icon">
+            </a>
+
+            <textarea   rows="2"
+                        cols="1"
+                        class="captionText"
+                        draggable="false"
+                        contenteditable="false"
+                        readonly
+                        id="desc_txt">Click Pepper &#013;to expand.</textarea>
+
+            <div    id="nav-div">
+                <ul     id="nav-links">
+                    
+                    <li     class="active">
+
+                        <a  href="index.html"
+                            title="View Portfolio"
+                            target="_self"><img     src="images/icons/Portfolio_Icon.png"
+                                                    class="img_Portfolio"
+                                                    width="40"
+                                                    height="37"
+                                                    alt="Portfolio Icon"></a>
+                            <a  href="index.html"
+                                title="View Portfolio"
+                                class="portfolio"
+                                id="portfolio_txt">
+                                <span class="hidden">Portfolio</span></a>
+                    </li>
+                    
+                    <li><a  href="projects.html"
+                            title="View Projects"
+                            target="_self"><img     src="images/icons/Projects_Icon.png"
+                                                    class="img_Projects"
+                                                    width="40"
+                                                    height="33"
+                                                    alt="Project Icon"></a>
+                            <a  href="projects.html"
+                                title="View Projects"
+                                target="_self"
+                                class="projects">
+                                <span class="hidden2">Projects</span>                            
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    <!-- Content-->
+
+        <main   class="carousel-content-area">
+            <div class="carousel-container">
+                    <ul class="carousel my-carousel">
+        
+                        <input class="carousel__activator" type="radio" id="A" name="activator" checked="checked"/>
+                        <input class="carousel__activator" type="radio" id="B" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="C" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="D" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="E" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="F" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="G" name="activator"/>
+                        <input class="carousel__activator" type="radio" id="H" name="activator"/>
+
+                        <div    class="carousel__controls">
+
+                                <label class="carousel__control carousel__control--backward" for="H"
+                                onclick="btnHideAll();btnDisplayHale();"></label>
+                                <label class="carousel__control carousel__control--forward" for="B"
+                                onclick="btnHideAll();btnDisplaySuperman();"></label>
+              
+                        </div>
+                            
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="A"
+                                onclick="btnHideAll();txtFrog();"></label>
+                                <label class="carousel__control carousel__control--forward" for="C"
+                                onclick="btnHideAll();btnDisplayJungle();"></label>
+              
+                        </div>
+                            
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="B"
+                                onclick="btnHideAll();btnDisplaySuperman();"></label>
+                                <label class="carousel__control carousel__control--forward" for="D"
+                                onclick="btnHideAll();btnDisplayBolt();"></label>
+              
+                        </div>
+                            
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="C"
+                                onclick="btnHideAll();btnDisplayJungle();"></label>
+                                <label class="carousel__control carousel__control--forward" for="E"
+                                onclick="btnHideAll();txtMango();"></label>
+              
+                        </div>
+              
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="D"
+                                onclick="btnHideAll();btnDisplayBolt();"></label>
+                                <label class="carousel__control carousel__control--forward" for="F"
+                                onclick="btnHideAll();txtSilent();"></label>
+              
+                        </div>
+                            
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="E"
+                                onclick="btnHideAll();txtMango();"></label>
+                                <label class="carousel__control carousel__control--forward" for="G"
+                                onclick="btnHideAll();txtWatch();"></label>
+              
+                        </div>
+              
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="F"
+                                onclick="btnHideAll();txtSilent();"></label>
+                                <label class="carousel__control carousel__control--forward" for="H"
+                                onclick="btnHideAll();btnDisplayHale();"></label>
+              
+                        </div>
+                            
+                        <div    class="carousel__controls">
+              
+                                <label class="carousel__control carousel__control--backward" for="G"
+                                onclick="btnHideAll();txtClose();"></label>
+                                <label class="carousel__control carousel__control--forward" for="A"
+                                onclick="btnHideAll();txtFrog();"></label>
+              
+                        </div>
+
+                        <li     class="carousel__slide">
+                            
+                                <a  class="btn"
+                                href="#open-modal_pep"
+                                onclick="currentSlide(1);txtModal();"
+                                alt="Pepper Button"></a>
+                        </li>
+  
+                        <li     class="carousel__slide">
+                            
+                                <a  class="btn"
+                                id="Superman_btn"
+                                href="#open-modal_superman"
+                                onclick="currentSlide(3);txtModal();"
+                                alt="Superman Button"
+                                style="visibility: hidden"></a>
+                        </li>
+  
+                        <li     class="carousel__slide">
+                            
+                                <a  class="btn"
+                                id="Jungle_btn"
+                                href="#open-modal_jungleclub"
+                                onclick="currentSlide(6);txtModal();"
+                                alt="Jungle Club Button"
+                                style="visibility: hidden"></a>
+                        </li>
+                        
+                        <li     class="carousel__slide">
+                            
+                                <a  class="btn"
+                                id="Bolt_btn"
+                                href="#open-modal_bolt"
+                                onclick="currentSlide(9);txtModal();"
+                                alt="Bolt Button"
+                                style="visibility: hidden"></a>
+                        </li>
+                        
+                        <li class="carousel__slide">                            
+                        </li>
+                        
+                        <li class="carousel__slide">                            
+                        </li>
+                        
+                        <li class="carousel__slide">                            
+                        </li>
+                        
+                        <li     class="carousel__slide">
+                            
+                                <a  class="btn"
+                                id="Hale_btn"
+                                href="#open-modal_halenom"
+                                onclick="currentSlide(12);txtModal();"
+                                alt="HaleNom Button"
+                                style="visibility: hidden"></a>
+                        </li>
+
+                        <div    class="carousel__indicators">
+                        
+                                <label  class="carousel__indicator" for="A"
+                                onclick="btnHideAll();txtFrog();"></label>
+                                
+                                <label  class="carousel__indicator" for="B"
+                                onclick="btnHideAll();btnDisplaySuperman();"></label>
+            
+                                <label  class="carousel__indicator" for="C"
+                                onclick="btnHideAll();btnDisplayJungle();"></label>
+            
+                                <label  class="carousel__indicator" for="D"
+                                onclick="btnHideAll();btnDisplayBolt();"></label>
+                                
+                                <label  class="carousel__indicator" for="E"
+                                onclick="btnHideAll();txtMango();"></label>
+            
+                                <label  class="carousel__indicator" for="F"
+                                onclick="btnHideAll();txtSilent();"></label>                        
+            
+                                <label  class="carousel__indicator" for="G"
+                                onclick="btnHideAll();txtWatch();"></label>
+                                
+                                <label  class="carousel__indicator" for="H"
+                                onclick="btnHideAll();btnDisplayHale();"></label>
+                                
+                        </div>
+                    </ul>
+            </div>
+
+            <div    id="open-modal_pep"
+                    class="modal-window_pep">
+
+                <div    class="modal-container">
+
+                    <div    class="Close_Div">
+                        
+                        <a  href="#"
+                            title="Close"
+                            class="modal-close"
+                            onclick="txtClose()">Close</a>
+
+                    </div>
+
+                    <div    class="content-area">
+                        <div    class="row">
+                            <div    class="column_software">
+                                <p>Programs</p>
+
+                                <div    class="software_Pep1"></div>
+                                <div    class="software_Pep2"></div>
+                                <div    class="software_Pep3"></div>
+                            </div>
+                            
+                            <div    class="column_main_pep">
+                                <div    class="mySlides">
+                                    <div    class="pepper1"></div>
+                                </div>
+                                <div    class="mySlides">
+                                    <div    class="pepper2"></div>
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs">
+                                <div    class="thumbSlides">
+                                    <div    id="Pep_Thumb1"
+                                            class="demo"
+                                            onclick="currentSlide(1)">
+                                    </div>
+                                    <div    id="Pep_Thumb2"
+                                            class="demo"
+                                            onclick="currentSlide(2)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div    id="open-modal_superman"
+                    class="modal-window_superman">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        title="Close"
+                        class="modal-close"
+                        onclick="txtClose()">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row"> 
+
+                            <div    class="column_software">
+
+                                <p>Programs</p>
+
+                                <div    class="software_Superman1"></div>
+                            </div>
+
+                            <div    class="column_main_superman">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="superman_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="superman_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="superman_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_superman">
+                                <div    class="thumbSlides_superman">                                        
+                                    <div	id="Superman_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(3)">
+                                    </div>
+                                    <div	id="Superman_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(4)">
+                                    </div>
+                                    <div	id="Superman_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(5)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div	id="open-modal_jungleclub"
+                    class="modal-window_jungleclub">
+
+                <div	class="modal-container">
+
+                    <div>
+                        <a  href="#"
+                            title="Close"
+                            class="modal-close"
+                            onclick="txtClose()">Close</a>
+                    </div>
+
+                    <div   class="content-area">                    
+                        <div    class="row">
+                            <div    class="column_software">
+                                    <p>Programs</p>
+
+                                    <div    class="software_jungle1"></div>
+                                    <div    class="software_jungle2"></div>
+                                    <div    class="software_jungle3"></div>
+                            </div>
+
+                            <div    class="column_main_jungle">
+                                <div    class="mySlides">                                    
+                                    <div    class="jungle1"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="jungle2"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="jungle3"></div>
+                                </div>                                
+                            </div>
+                            
+                            <div    class="column_thumbs_jungle">
+                                <div    class="thumbSlides">                                    
+                                    <div    	id="Jungle_Thumb1"
+						                        class="demo"
+						                        onclick="currentSlide(6)">
+                                    </div>
+                                    <div    	id="Jungle_Thumb2"
+                                                class="demo"
+                                                onclick="currentSlide(7)">
+                                    </div>
+				                    <div    	id="Jungle_Thumb3"
+						                        class="demo"
+						                        onclick="currentSlide(8)">
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div	id="open-modal_bolt"
+                    class="modal-window_bolt">
+
+                <div	class="modal-container">
+
+                    <div>
+                        <a  href="#"
+                            title="Close"
+                            class="modal-close"
+                            onclick="txtClose()">Close</a>
+                    </div>
+
+                    <div   class="content-area">                    
+                        <div    class="row">
+                            <div    class="column_software">
+                                    <p>Programs</p>
+
+                                    <div    class="software_bolt1"></div>
+                                    <div    class="software_bolt2"></div>
+                                    <div    class="software_bolt3"></div>
+                            </div>
+
+                            <div    class="column_main_bolt">
+                                <div    class="mySlides">                                    
+                                    <div    class="bolt1"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="bolt2"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="bolt3"></div>
+                                </div>                                
+                            </div>
+
+                            <div    class="column_thumbs_bolt">
+                                <div    class="thumbSlides">                                    
+                                    <div    	id="Bolt_Thumb1"
+						                        class="demo"
+						                        onclick="currentSlide(9)">
+                                    </div>
+                                    <div    	id="Bolt_Thumb2"
+                                                class="demo"
+                                                onclick="currentSlide(10)">
+                                    </div>
+				                    <div    	id="Bolt_Thumb3"
+						                        class="demo"
+						                        onclick="currentSlide(11)">
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div	id="open-modal_halenom"
+                    class="modal-window_halenom">
+
+                <div	class="modal-container">
+
+                    <div>
+                        <a  href="#"
+                            title="Close"
+                            class="modal-close"
+                            onclick="txtClose()">Close</a>
+                    </div>
+
+                    <div   class="content-area">                    
+                        <div    class="row">
+                            <div    class="column_software">
+                                    <p>Programs</p>
+
+                                    <div    class="software_halenom1"></div>
+                                    <div    class="software_halenom2"></div>
+                                    <div    class="software_halenom3"></div>
+                            </div>
+
+                            <div    class="column_main_halenom">
+                                <div    class="mySlides">                                    
+                                    <div    class="halenom1"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="halenom2"></div>
+                                </div>
+                                <div    class="mySlides">                                    
+                                    <div    class="halenom3"></div>
+                                </div>                                
+                            </div>
+
+                            <div    class="column_thumbs_halenom">
+                                <div    class="thumbSlides_halenom">                                    
+                                    <div    	id="HaleNom_Thumb1"
+						                        class="demo"
+						                        onclick="currentSlide(12)">
+                                    </div>
+                                    <div    	id="HaleNom_Thumb2"
+                                                class="demo"
+                                                onclick="currentSlide(13)">
+                                    </div>
+				                    <div    	id="HaleNom_Thumb3"
+						                        class="demo"
+						                        onclick="currentSlide(14)">
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Footer-->
+
+        <footer class="footer-area">
+
+            <p>&copy;2019 | Frogman Designz</p>
+          
+                <div    class="footer_icon_container">                    
+                    
+                    <a href="https://github.com/frogmandesignz" target="_blank">
+                        <img    src="images/icons/Github.png"
+                                width="40"
+                                height="40"
+                                alt="Github Icon">
+                    </a>
+                    
+                    <!--<a href="https://twitter.com/frogmandesignz" target="_blank">
+                        <img    src="images/icons/download3.png"
+                                width="32px"
+                                height="32px"
+                                alt="Twitt">
+                    </a>-->
+                    
+                    <a href="https://www.linkedin.com/in/frogmandesignz/" target="_blank">
+                        <img    src="images/icons/download5.png"
+                                width="40"
+                                height="40"
+                                alt="Linkedin Icon">
+                    </a>
+                </div>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet" type="text/css">
+    <title>Pound Puppies Projects</title>
+
+    <!-- Bootstrap -->	
+	<link href="css/global.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.3.1.js"></script>
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+    
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n <1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";            
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
+    /*captionText.innerHTML = dots[slideIndex-1].alt;*/
+}
+</script>
+
+<script>
+    
+        function txtClose(){
+            desc_txt.value = "Click close\n to exit.";
+        }
+
+        function txtModal(){
+            desc_txt.value = "Click Puppy,\n view animation."
+        }
+
+</script>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+    <nav class="navbar fixed-top header-area nav">
+                
+        <a  class="navbar-brand"
+            href="Index.html"><span class="hidden3"><img  src="images/logo/logo.png"
+                                    width="230"
+                                    height="60"
+                                    alt="Logo Icon"
+                                    class="img_nav"></span><img  src="images/logo/logo_mobile.png"
+                                    width="80"
+                                    height="34"
+                                    class="img_nav_small"
+                                    alt="Mobile Logo Icon">
+        </a> 
+        
+        <textarea rows= "2"
+                      cols = "1"                       
+                      class="captionText"
+                      name="captionText"
+                      draggable="false"
+                      readonly                                          
+                      id="desc_txt">Click Puppy; &#013;view animation.</textarea>
+
+        <div    id="nav-div">
+            <ul     id="nav-links">
+
+                <li><a  href="index.html"
+                        title="View Portfolio"
+                        target="_self"><img     src="images/icons/Portfolio_Icon.png"
+                                                class="img_Portfolio"
+                                                width="40"
+                                                height="37"
+                                                alt="Portfolio Icon"></a>
+                        <a  href="index.html"
+                            title="View Portfolio"
+                            class="portfolio"
+                            id="portfolio_txt">
+                            <span class="hidden">Portfolio</span></a>
+                </li>
+                
+                <li class="active">
+                    
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"><img     src="images/icons/Projects_Icon.png"
+                                                class="img_Projects"
+                                                width="40"
+                                                height="33"
+                                                alt="Project Icon"></a>
+                    <a  href="projects.html"
+                        title="View Projects"
+                        target="_self"
+                        class="projects">
+                        <span class="hidden2">Projects</span>                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <!-- Content -->
+<main   class="carousel-content-area">
+    <div    class="Projects_Puppies">        
+            <div    class="Brief_Puppies">
+                <div    class="Brief_Div">
+                    <div    class="Text_Div">
+                        <textarea   rows="1"
+                                    cols="1"
+                                    contenteditable="false"
+                                    readonly
+                                    id="Brief_Puppy_txt">Brief: 3D Pound Puppies</textarea>
+                        <textarea   rows="8"
+                                    cols="1"                                    
+                                    contenteditable="false"
+                                    readonly
+                                    id="Scope_Puppy_txt">Scope: Create (12) 3D Vector puppy variants and animations using Swift3D and Flash for interactive Pound Puppy website [not online anymore].&#013;&#013; Click on puppy to view animations.</textarea>
+                   
+
+                        <p  id="Puppy_P">Programs Used</p>
+                        <div   class="Programs_Puppies">
+                            <ul class="Puppies_Programs_Row">
+                                <li id="Puppies_Program1"></li>
+                                <li id="Puppies_Program2"></li>                    
+                                <li id="Puppies_Program3"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div    class="Content_Puppies">
+                <ul    class="Puppies_Row1">
+                    
+                    <a  href="#open-modal_pup1"
+                        class="btn_pup"
+                        onclick="currentSlide(1);txtClose();">
+                        <li    id="Puppy_Style1"></li></a>
+                    
+                    <a  href="#open-modal_pup2"
+                        class="btn_pup"
+                        onclick="currentSlide(4);txtClose();">
+                        <li    id="Puppy_Style2"></li></a>
+                    
+                    <a  href="#open-modal_pup3"
+                        class="btn_pup"
+                        onclick="currentSlide(7);txtClose();">
+                        <li    id="Puppy_Style3"></li></a>
+                </ul>
+                <ul    class="Puppies_Row2">
+                    
+                    <a  href="#open-modal_pup4"
+                        class="btn_pup"
+                        onclick="currentSlide(10);txtClose();">
+                        <li    id="Puppy_Style4"></li></a>
+                    
+                    <a  href="#open-modal_pup5"
+                        class="btn_pup"
+                        onclick="currentSlide(13);txtClose();">
+                        <li    id="Puppy_Style5"></li></a>
+                    
+                    <a  href="#open-modal_pup6"
+                        class="btn_pup"
+                        onclick="currentSlide(16);txtClose();">
+                        <li    id="Puppy_Style6"></li></a>
+                    
+                </ul>
+                <ul    class="Puppies_Row3">
+
+                    <a  href="#open-modal_pup7"
+                        class="btn_pup"
+                        onclick="currentSlide(19);txtClose();">
+                        <li    id="Puppy_Style7"></li></a>
+
+                    <a  href="#open-modal_pup8"
+                        class="btn_pup"
+                        onclick="currentSlide(22);txtClose();">
+                        <li    id="Puppy_Style8"></li></a>
+
+                    <a  href="#open-modal_pup9"
+                        class="btn_pup"
+                        onclick="currentSlide(25);txtClose();">
+                        <li    id="Puppy_Style9"></li></a>
+                        
+                </ul>
+                <ul    class="Puppies_Row4">
+
+                    <a  href="#open-modal_pup10"
+                        class="btn_pup"
+                        onclick="currentSlide(28);txtClose();">
+                        <li    id="Puppy_Style10"></li></a>
+                    
+                    <a  href="#open-modal_pup11"
+                        class="btn_pup"
+                        onclick="currentSlide(31);txtClose();">
+                        <li    id="Puppy_Style11"></li></a>
+                    
+                    <a  href="#open-modal_pup12"
+                        class="btn_pup"
+                        onclick="currentSlide(34);txtClose();">
+                        <li    id="Puppy_Style12"></li></a>
+                </ul>
+            </div>
+    </div>
+
+            <div    id="open-modal_pup1"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup1_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup1_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup1_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup1_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(1)">
+                                    </div>
+                                    <div	id="Pup1_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(2)">
+                                    </div>
+                                    <div	id="Pup1_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(3)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div    id="open-modal_pup2"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup2_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup2_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup2_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup2_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(4)">
+                                    </div>
+                                    <div	id="Pup2_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(5)">
+                                    </div>
+                                    <div	id="Pup2_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(6)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup3"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup3_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup3_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup3_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup3_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(7)">
+                                    </div>
+                                    <div	id="Pup3_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(8)">
+                                    </div>
+                                    <div	id="Pup3_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(9)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup4"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup4_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup4_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup4_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup4_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(10)">
+                                    </div>
+                                    <div	id="Pup4_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(11)">
+                                    </div>
+                                    <div	id="Pup4_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(12)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup5"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup5_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup5_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup5_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup5_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(13)">
+                                    </div>
+                                    <div	id="Pup5_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(14)">
+                                    </div>
+                                    <div	id="Pup5_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(15)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup6"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup6_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup6_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup6_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup6_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(16)">
+                                    </div>
+                                    <div	id="Pup6_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(17)">
+                                    </div>
+                                    <div	id="Pup6_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(18)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup7"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup7_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup7_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup7_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup7_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(19)">
+                                    </div>
+                                    <div	id="Pup7_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(20)">
+                                    </div>
+                                    <div	id="Pup7_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(21)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup8"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup8_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup8_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup8_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup8_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(22)">
+                                    </div>
+                                    <div	id="Pup8_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(23)">
+                                    </div>
+                                    <div	id="Pup8_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(24)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup9"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup9_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup9_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup9_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup9_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(25)">
+                                    </div>
+                                    <div	id="Pup9_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(26)">
+                                    </div>
+                                    <div	id="Pup9_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(27)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup10"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup10_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup10_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup10_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup10_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(28)">
+                                    </div>
+                                    <div	id="Pup10_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(29)">
+                                    </div>
+                                    <div	id="Pup10_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(30)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup11"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup11_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup11_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup11_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup11_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(31)">
+                                    </div>
+                                    <div	id="Pup11_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(32)">
+                                    </div>
+                                    <div	id="Pup11_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(33)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div    id="open-modal_pup12"
+                    class="modal-window_pup">
+
+                <div    class="modal-container">
+                    
+                    <div>
+                        <a  href="#"
+                        onclick="txtModal()"
+                        title="Close"
+                        class="modal-close">Close</a>
+                    </div>
+                
+                    <div    class="content-area">    
+                        <div    class="row">
+                            <div    class="column_main_pup">                
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup12_1"></div>                                    
+                                </div>
+
+                                <div    class="mySlides">                
+                                    <div    class="pup12_2"></div>                                    
+                                </div>
+                                
+                                <div    class="mySlides">                
+                                    <div    class="pup12_3"></div>                                    
+                                </div>
+                            </div>
+
+                            <div    class="column_thumbs_pup">
+                                <div    class="thumbSlides_pup">                                        
+                                    <div	id="Pup12_Thumb1"
+						                    class="demo"
+						                    onclick="currentSlide(34)">
+                                    </div>
+                                    <div	id="Pup12_Thumb2"
+						                    class="demo"
+						                    onclick="currentSlide(35)">
+                                    </div>
+                                    <div	id="Pup12_Thumb3"
+						                    class="demo"
+						                    onclick="currentSlide(36)">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+<!-- Footer -->
+<footer class="footer-area">
+    <p>&copy;2019 | Frogman Designz</p>
+        
+        <div    class="footer_icon_container">
+            
+            
+            <a href="https://github.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/Github.png"
+                        width="40"
+                        height="40"
+                        alt="Github Icon">
+            </a>
+            
+            <!--<a href="https://twitter.com/frogmandesignz" target="_blank">
+                <img    src="images/icons/download3.png"
+                        width="32px"
+                        height="32px"
+                        alt="Twitt">
+            </a>-->
+            
+            <a href="https://www.linkedin.com/in/frogmandesignz/" target="_blank">
+                <img    src="images/icons/download5.png"
+                        width="40"
+                        height="40"
+                        alt="LinkedIn Icon">
+            </a>
+        </div>
+</footer>
+
+</body>
+
+</html>
